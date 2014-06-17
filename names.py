@@ -97,6 +97,7 @@ l('build-events-warehouse-distributed-part2', 'events-warehouse', 'develop', 'pa
 l('build-events-warehouse-distributed-part2-latest-release', 'events-warehouse', 'release', 'part2', 'warehouse')
 l('build-image-server', 'image-server', 'develop', 'build-ant', 'core')
 l('build-image-server-release-andy-warhol', 'image-server', 'release_andy-warhol', 'build-ant', 'core')
+l('build-image-server-release-britto', 'image-server', 'release_britto', 'build-ant', 'core')
 l('build-lyricfind', 'lyricfind', 'develop', 'build-ant', 'core')
 l('build-lyricfind-release-chattanooga', 'lyricfind', 'release_chattanooga', 'build-ant', 'core')
 l('build-massupload-client', 'mass-upload-client', 'develop', 'build-gradle', 'core')
@@ -105,6 +106,7 @@ l('build-origami', 'origami', 'develop', 'build-gradle', 'core')
 l('build-paperplane', 'paperplane', 'develop', 'build-ant', 'warehouse')
 l('build-popularity', 'popularity', 'develop', 'build-ant', 'radio')
 l('build-python-core', 'python-core', 'develop', 'build-ant', 'core')
+l('build-python-core-release-moonstone', 'python-core', 'release_moonstone', 'build-ant', 'core')
 l('build-radio-site', 'radio-site', 'develop', 'build-ant', 'web')
 l('build-radio-site-pull-requests', 'radio-site', '_pr_', 'build-ant', 'web')
 l('build-radio-site-release', 'radio-site', 'release_gambit-1', 'build-ant', 'web')
@@ -242,7 +244,7 @@ l('iOS-release-frank-tests', 'we7-iOS', 'release', 'frank-tests', 'ios')
 #just release ?
 l('iOS-release-unit-tests', 'we7-iOS', 'release-3.5', 'unit-test-bash', 'ios')
 
-#l('Jenkins-draw-views', 'jenkins-graphviz', 'master', 'draw-jenkins-views', 'det')
+l('Jenkins-draw-views', 'jenkins-graphviz', 'master', 'draw-jenkins-views', 'det')
 
 l('metadata-api', 'metadata-ap', 'develop', 'build-api-gradle', 'research')
 l('metadata-api-integration-test', 'metadata-ap', 'develop', 'test-vagrant', 'research')
@@ -274,7 +276,7 @@ l('package-events-api-release', 'events-api', 'tags_release', 'deb_build_script'
 l('package-events-api-staging', 'events-api', 'release', 'deb_build_script', 'no')
 l('package-events-warehouse-develop', 'events-warehouse', 'develop', 'deb_build_script', 'no')
 l('package-events-warehouse-release', 'events-warehouse', 'tags_release', 'deb_build_script', 'no')
-l('package-events-warehouse-staging', 'events-warehouse', 'release', 'deb_build_script', 'no')
+l('package-events-warehouse-staging', 'events-warehouse', 'release', 'deb_build_script', 'warehouse')
 l('package-gracenote-fingerprinter', 'gracenote-fingerprinter', 'develop', 'deb_build_pkg', 'no')
 l('package-image-server-develop', 'image-server', 'develop', 'deb_build_script', 'no')
 l('package-image-server-release', 'image-server', 'tags_release', 'deb_build_script', 'no')
@@ -334,12 +336,17 @@ l('sonar-python-core', 'python-core', 'develop', 'sonar', 'det')
 l('sonar-radio-site', 'radio-site', 'develop', 'sonar', 'det')
 l('sonar-recommendations', 'recommendations', 'develop', 'sonar', 'det')
 
-l('tomcat-helper-build', 'tomcat-session', 'develop', 'build-gradle', 'core')
-l('tomcat-session-build', 'utilities', 'develop', 'build-gradle', 'core')
+
+l('tomcat-session-build', 'tomcat-session', 'develop', 'build-gradle', 'core')
+l('tomcat-helper-build', 'utilities_tomcat-helper', 'develop', 'build-gradle', 'core')
+
+
+
 l('test-events-pipeline', 'test-events-pipeline', 'develop', 'vagrant-build', 'warehouse')
 l('unittest-events-warehouse', 'events-warehouse', 'develop', 'unit-test-ant', 'warehouse')
 l('unittest-events-warehouse-latest-release', 'events-warehouse', 'release', 'unit-test-ant', 'warehouse')
 l('unittest-events-warehouse-pull-requests', 'events-warehouse', '_pr_', 'unit-test-ant', 'warehouse')
+
 l('we7-android-daniele', 'we7-Android', '_any_', 'test', 'daniele')
 l('we7-android-develop', 'we7-Android', 'develop', 'test', 'android')
 l('we7-android-develop-MarketKey', 'we7-Android', 'develop', 'marketKey', 'android')
@@ -347,6 +354,9 @@ l('we7-android-frontiersilicon', 'we7-Android', 'develop', 'frontiersilicon', 'a
 l('we7-android-hotfix', 'we7-Android', 'hotfix', 'test', 'android')
 l('we7-android-hotfix-marketKey', 'we7-Android', 'hotfix', 'marketKey', 'android')
 l('we7-android-hotfix-marketKey-notDebuggable', 'we7-Android', 'hotfix', 'marketKey-notDebuggable', 'android')
+l('we7-android-develop-MarketKey-notDebuggable', 'we7-Android', 'develop', 'marketKey-debuggableFalse', 'android')
+
+
 l('we7-android-master', 'we7-Android', 'master', 'test', 'android')
 l('we7-android-master-debugKey', 'we7-Android', 'master', 'test-debugKey', 'android')
 l('we7-android-pull-requests', 'we7-Android', '_pr_', 'test', 'android')
@@ -359,13 +369,15 @@ l('we7-calabash-android-nightly-build', 'we7-Android', 'develop', 'calabash-nigh
 
 l('we7-shared-build', 'shared-jar', 'develop', 'build-gradle', 'core')
 
-l('windows-develop', 'bbm-windows', 'develop', 'vs-build-test', 'windows')
-l('windows-develop-mystation', 'bbm-windows', 'develop.MyStation', 'vs-build-test', 'windows')
+l('windows-develop', 'bbm-windows', 'develop', 'build-test', 'windows')
+l('windows-develop-cache', 'bbm-windows', 'develop_Cache', 'build-test', 'windows')
+l('windows-develop-configuration-service', 'bbm-windows', 'develop_ConfigurationService', 'build-test', 'windows')
 
 #wat
-l('windows-develop-release', 'bbm-windows', 'develop', 'vs-build-test-release', 'windows')
-l('windows-pull-requests', 'bbm-windows', '_pr_', 'vs-build-test', 'windows')
-l('windows-testbench', 'bbm-windows', 'develop', 'vs-testbench', 'windows')
+l('windows-develop-release', 'bbm-windows', 'develop', 'build-test-release', 'windows')
+l('windows-develop-starships', 'bbm-windows', 'develop_Starships', 'build-test-release', 'windows')
+l('windows-pull-requests', 'bbm-windows', '_pr_', 'build-test', 'windows')
+l('windows-testbench', 'bbm-windows', 'develop', 'testbench', 'windows')
 
 
 def attributes(object_list, att_name):
@@ -457,19 +469,19 @@ def print_renames(team):
 #print_renames('research')
 #print_renames('timp')
 #print_renames('web')
-
-
-# Outstanding
-#print_renames('android')
+#print_renames('det')
 #print_renames('daniele')
 #print_renames('ios')
 #print_renames('tvapp')
-#print_renames('warehouse')
 #print_renames('windows')
+
+
+# Outstanding
+print_renames('warehouse')
 
 
 
 #report_list(g_projects)
 #names(g_projects)
 
-report()
+#eport()
