@@ -93,8 +93,10 @@ l('build-events-warehouse-distributed', 'events-warehouse', 'develop', 'build-an
 l('build-events-warehouse-distributed-latest-release', 'events-warehouse', 'release', 'build-ant', 'warehouse')
 l('build-events-warehouse-distributed-part1', 'events-warehouse', 'develop', 'part1', 'warehouse')
 l('build-events-warehouse-distributed-part1-latest-release', 'events-warehouse', 'release', 'part1', 'warehouse')
+l('build-events-warehouse-distributed-part1-ducktales', 'events-warehouse', 'release_23_ducktales', 'part1', 'warehouse')
 l('build-events-warehouse-distributed-part2', 'events-warehouse', 'develop', 'part2', 'warehouse')
 l('build-events-warehouse-distributed-part2-latest-release', 'events-warehouse', 'release', 'part2', 'warehouse')
+l('build-events-warehouse-distributed-part2-ducktales', 'events-warehouse', 'release_23_ducktales', 'part2', 'warehouse')
 l('build-image-server', 'image-server', 'develop', 'build-ant', 'core')
 l('build-image-server-release-andy-warhol', 'image-server', 'release_andy-warhol', 'build-ant', 'core')
 l('build-image-server-release-britto', 'image-server', 'release_britto', 'build-ant', 'core')
@@ -119,10 +121,11 @@ l('build-WAIF', 'WAIF', 'develop', 'build-ant', 'web')
 l('build-warehouse-reporting', 'warehouse-reporting', 'develop', 'build-ant', 'warehouse')
 l('build-warehouse-reporting-latest-release', 'warehouse-reporting', 'release', 'build-ant', 'warehouse')
 l('build-we7-pig-unit', 'events-warehouse', 'develop', 'pig-unit-tests', 'warehouse')
-l('build-we7-pig-unit-ducktails', 'events-warehouse', 'release_23_ducktales', 'pig-unit-tests', 'warehouse')
+l('build-we7-pig-unit-ducktales', 'events-warehouse', 'release_23_ducktales', 'pig-unit-tests', 'warehouse')
 l('build-we7-pig-unit-latest-release', 'events-warehouse', 'release', 'pig-unit-tests', 'warehouse')
 l('build-we7-subprojects', 'events-warehouse', 'develop', 'unit-test-subprojects', 'warehouse')
 l('build-we7-subprojects-latest-release', 'events-warehouse', 'release', 'unit-test-subprojects', 'warehouse')
+l('build-we7-subprojects-ducktales', 'events-warehouse', 'release_23_ducktales', 'unit-test-subprojects', 'warehouse')
 l('build-wez-js', 'wez.js', 'develop', 'build-ant', 'web')
 l('build-zeppelin', 'zeppelin', 'develop', 'build-ant', 'core')
 l('build-zeppelin-release-avro', 'zeppelin', 'release_avro', 'build-ant', 'core')
@@ -200,7 +203,7 @@ l('events-domain', 'events-domain', 'develop', 'deploy', 'warehouse')
 l('events-idl', 'events-idl', 'develop', 'pushChangesToEventIdIosRepo-gradle', 'warehouse')
 
 # parameterised, defaulted to release/*
-l('events-idl', 'events-idl', 'release', 'pushChangesToEventIdIosRepo-gradle', 'warehouse')
+l('events-idl-release', 'events-idl', 'release', 'pushChangesToEventIdIosRepo-gradle', 'warehouse')
 
 # # also hotfix
 l('events-storm', 'events-storm', 'develop', 'install-mvn', 'warehouse')
@@ -212,6 +215,7 @@ l('events-warehouse-vagrant-end-to-end-test-ducktales', 'events-warehouse', '23_
   'warehouse')
 l('events-warehouse-vagrant-end-to-end-test-events-vagrant', 'events-warehouse', 'feauture_add-pig-processing-to-end-to-end-tests', 'vagrant-end-to-end-test',
   'warehouse')
+l('events-vagrant', 'events-warehouse', 'develop', 'test-vagrant', 'warehouse')
 l('events-warehouse-vagrant-end-to-end-test-experimental', 'events-warehouse', 'feature_curb_yarn',
   'vagrant-end-to-end-test', 'warehouse')
 l('events-warehouse-vagrant-end-to-end-test-latest-release', 'events-warehouse', 'release', 'vagrant-end-to-end-test',
@@ -343,9 +347,12 @@ l('tomcat-helper-build', 'utilities_tomcat-helper', 'develop', 'build-gradle', '
 
 
 l('test-events-pipeline', 'test-events-pipeline', 'develop', 'vagrant-build', 'warehouse')
+l('test-events-pipeline-rel', 'test-events-pipeline', 'develop', 'vagrant-build-release', 'warehouse')
 l('unittest-events-warehouse', 'events-warehouse', 'develop', 'unit-test-ant', 'warehouse')
 l('unittest-events-warehouse-latest-release', 'events-warehouse', 'release', 'unit-test-ant', 'warehouse')
+l('unittest-events-warehouse-ducktales', 'events-warehouse', 'release_23_ducktales', 'unit-test-ant', 'warehouse')
 l('unittest-events-warehouse-pull-requests', 'events-warehouse', '_pr_', 'unit-test-ant', 'warehouse')
+l('events-warehouse-vagrant-smoke-test-deb', 'events-warehouse', 'release ', 'smoketest-vagrant', 'warehouse')
 
 l('we7-android-daniele', 'we7-Android', '_any_', 'test', 'daniele')
 l('we7-android-develop', 'we7-Android', 'develop', 'test', 'android')
